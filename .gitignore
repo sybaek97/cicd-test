@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Key store file
+my-release-key.jks
