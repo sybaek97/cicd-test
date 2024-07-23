@@ -3,7 +3,7 @@ name: Android CD
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "v1.0.2"
 
 jobs:
   build:
@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
       - name: Cache Gradle packages
         uses: actions/cache@v2
